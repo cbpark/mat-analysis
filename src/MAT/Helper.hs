@@ -3,11 +3,14 @@
 
 module MAT.Helper where
 
-import           HEP.Kinematics.Antler             (Antler, deltaAT, mAT)
+import           HEP.Kinematics.Antler
 
-import           Data.ByteString                   (ByteString)
-import qualified Data.ByteString.Char8             as C
-import           Data.Double.Conversion.ByteString (toExponential, toFixed)
+import           HEP.Kinematics
+import           HEP.Kinematics.Vector.LorentzTVector (setXYT)
+
+import           Data.ByteString                      (ByteString)
+import qualified Data.ByteString.Char8                as C
+import           Data.Double.Conversion.ByteString    (toExponential, toFixed)
 
 data AT = AT { _deltaAT :: Double  -- ^ Delta_{AT}
              , _mATs    :: [Double]
@@ -33,3 +36,8 @@ calcAT at qx qy qz e =
 mkLen :: Num a => Int -> [a] -> [a]
 mkLen n xs | length xs >= n  = take n xs
            | otherwise       = mkLen n $! xs <> [0]
+
+mTtrue :: Antler -> TransverseMomentum -> Double
+mTtrue Antler {..} ptmiss =
+    let pChiT = setXYT (px ptmiss) (py ptmiss) (norm ptmiss)
+    in transverseMass [_v1, _v2] pChiT
