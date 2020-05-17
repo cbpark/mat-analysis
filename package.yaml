@@ -1,0 +1,44 @@
+name:         mat-analysis
+version:      "0.0.0.0"
+# synopsis:
+author:       Chan Beom Park
+maintainer:   cbpark@gmail.com
+license-file: LICENSE
+github:       cbpark/mat-analysis
+category:     Physics
+
+ghc-options:  -Wall -Wcompat -O2 -funbox-strict-fields
+
+dependencies:
+  - base >= 4.12.0.0 && < 5
+  - bytestring
+  - double-conversion
+  - pipes
+  - pipes-bytestring
+  - zlib
+  - hep-utilities
+  - mantler
+
+executables:
+  phasespace1:
+    main: phasespace1.hs
+    source-dirs: src
+
+  phasespace2:
+    main: phasespace2.hs
+    source-dirs: src
+
+  atLHEF1:
+    main: atLHEF1.hs
+    source-dirs: src
+    ghc-options: -threaded
+
+  atLHEF2:
+    main: atLHEF2.hs
+    source-dirs: src
+    ghc-options: -threaded
+
+  atLHCO:
+    main: atLHCO.hs
+    source-dirs: src
+    ghc-options: -threaded

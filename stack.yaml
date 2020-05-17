@@ -1,0 +1,9 @@
+resolver: lts-15.13
+
+packages:
+- .
+
+extra-deps:
+- git: git@github.com:cbpark/hep-utilities.git
+  commit: 02d1e4dd0c951d7bb8165d3a18190ad7ef0d5835
+- ../mantler

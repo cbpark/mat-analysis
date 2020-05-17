@@ -1,0 +1,122 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 4bdba0d31082770f9fa0c1998cce584d5dab210dce2f1a0d84fa1419cf7e8195
+
+name:           mat-analysis
+version:        0.0.0.0
+category:       Physics
+homepage:       https://github.com/cbpark/mat-analysis#readme
+bug-reports:    https://github.com/cbpark/mat-analysis/issues
+author:         Chan Beom Park
+maintainer:     cbpark@gmail.com
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/cbpark/mat-analysis
+
+executable atLHCO
+  main-is: atLHCO.hs
+  other-modules:
+      MAT.Combinatorics
+      MAT.Helper
+      Paths_mat_analysis
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -O2 -funbox-strict-fields -threaded
+  build-depends:
+      base >=4.12.0.0 && <5
+    , bytestring
+    , double-conversion
+    , hep-utilities
+    , mantler
+    , pipes
+    , pipes-bytestring
+    , zlib
+  default-language: Haskell2010
+
+executable atLHEF1
+  main-is: atLHEF1.hs
+  other-modules:
+      MAT.Combinatorics
+      MAT.Helper
+      Paths_mat_analysis
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -O2 -funbox-strict-fields -threaded
+  build-depends:
+      base >=4.12.0.0 && <5
+    , bytestring
+    , double-conversion
+    , hep-utilities
+    , mantler
+    , pipes
+    , pipes-bytestring
+    , zlib
+  default-language: Haskell2010
+
+executable atLHEF2
+  main-is: atLHEF2.hs
+  other-modules:
+      MAT.Combinatorics
+      MAT.Helper
+      Paths_mat_analysis
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -O2 -funbox-strict-fields -threaded
+  build-depends:
+      base >=4.12.0.0 && <5
+    , bytestring
+    , double-conversion
+    , hep-utilities
+    , mantler
+    , pipes
+    , pipes-bytestring
+    , zlib
+  default-language: Haskell2010
+
+executable phasespace1
+  main-is: phasespace1.hs
+  other-modules:
+      MAT.Combinatorics
+      MAT.Helper
+      Paths_mat_analysis
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -O2 -funbox-strict-fields
+  build-depends:
+      base >=4.12.0.0 && <5
+    , bytestring
+    , double-conversion
+    , hep-utilities
+    , mantler
+    , pipes
+    , pipes-bytestring
+    , zlib
+  default-language: Haskell2010
+
+executable phasespace2
+  main-is: phasespace2.hs
+  other-modules:
+      MAT.Combinatorics
+      MAT.Helper
+      Paths_mat_analysis
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -O2 -funbox-strict-fields
+  build-depends:
+      base >=4.12.0.0 && <5
+    , bytestring
+    , double-conversion
+    , hep-utilities
+    , mantler
+    , pipes
+    , pipes-bytestring
+    , zlib
+  default-language: Haskell2010
